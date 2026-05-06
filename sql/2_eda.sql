@@ -2,7 +2,7 @@
 SELECT COUNT(*) AS total_rows FROM orders;
 
 
--- 2. grain check
+-- 2. check for duplicate order and product combinations
 SELECT 
     COUNT(*) AS total_rows,
     COUNT(DISTINCT order_id) AS distinct_orders,
@@ -47,7 +47,7 @@ FROM orders;
 -- 3b. yearly distribution
 SELECT 
     YEAR(order_date) AS order_year,
-    COUNT(*) AS line_items,
+    COUNT(*) AS items_sold,
     COUNT(DISTINCT order_id) AS distinct_orders,
     ROUND(SUM(sales), 2) AS total_sales
 FROM orders
@@ -58,7 +58,7 @@ ORDER BY order_year;
 -- 3c. yoy growth
 SELECT 
     YEAR(order_date) AS order_year,
-    COUNT(*) AS line_items,
+    COUNT(*) AS items_sold,
     COUNT(DISTINCT order_id) AS distinct_orders,
     ROUND(SUM(sales), 2) AS total_sales,
     ROUND(SUM(sales) / COUNT(DISTINCT order_id), 2) AS avg_order_value,

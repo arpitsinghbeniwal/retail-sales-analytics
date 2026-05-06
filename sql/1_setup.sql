@@ -1,5 +1,4 @@
--- Superstore database setup
--- Creates the orders table and loads data from CSV
+-- create database and orders table
 
 CREATE DATABASE superstore;
 USE superstore;
@@ -27,10 +26,12 @@ CREATE TABLE orders (
     sales           DECIMAL(10, 2) NOT NULL
 );
 
+
 -- check allowed file load directory
 SHOW VARIABLES LIKE 'secure_file_priv';
 
--- load data with UK date format conversion
+
+-- load data
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/superstore_orders.csv'
 INTO TABLE orders
 FIELDS TERMINATED BY ',' 
@@ -44,6 +45,7 @@ SET
     order_date = STR_TO_DATE(@order_date_raw, '%d/%m/%Y'),
     ship_date  = STR_TO_DATE(@ship_date_raw, '%d/%m/%Y');
 
--- verify load
+
+-- verify
 SELECT COUNT(*) FROM orders;
 SHOW WARNINGS;
