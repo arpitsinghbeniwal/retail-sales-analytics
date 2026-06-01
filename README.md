@@ -1,12 +1,10 @@
 # Retail Sales Analytics (2015-2018)
 
-South region's sales fell 32% in 2016 - the worst regional collapse in the dataset. This project investigates the four regions and finds they are structurally different markets. Central has the lowest AOV, explained by an Office Supplies-heavy product mix. South has the smallest customer base with poor retention but high per-order value, suggesting a high-value, low-frequency customer profile. Shipping service quality does not vary across regions and is ruled out as a factor in regional performance differences. 
-
-Built with: MySQL, Power BI, Python (Prophet)
-
 ## Overview
 
 A 4-year US retail dataset (9,800 transactions, $2.26M sales, 793 customers across 4 regions) analysed end-to-end. SQL diagnostic across 5 business questions, Power BI dashboard for stakeholder communication, and a weekly sales forecast in Python. The original Kaggle brief was a 7-day forecast - that became one component of a wider regional diagnostic.
+
+Built with: MySQL, Power BI, Python (Prophet)
 
 ## Business Questions
 
