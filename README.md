@@ -81,7 +81,6 @@ Daily Prophet attempted first; failed at ~250% MAPE due to high day-to-day volat
 
 
 ---
-
-Arpit Singh - [github.com/asb0811](https://github.com/asb0811)
+Arpit Singh - [github.com/arpit-singh-uk](https://github.com/arpit-singh-uk)
 
 Dataset: [Superstore Sales by Rohit Sahoo on Kaggle](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting)
